@@ -11,8 +11,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    if (not isinstance(matrix, list) or len(matrix) == 0 or
-         not all(isinstance(row, list) for row in matrix)):
+    if (not isinstance(matrix, list) or len(matrix) == 0 or not all(isinstance(row, list) for row in matrix)):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats"
         )
