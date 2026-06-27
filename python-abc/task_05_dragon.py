@@ -1,22 +1,26 @@
 #!/usr/bin/env python3
-""" Dragon class with mixins"""
+"""Dragon class with mixins."""
 
 
 class SwimMixin:
-  """ class SwimMixin."""
-  def swim(self):
-    """ methode swim"""
-    print( "The creature swims!")
+    """Mixin that adds swimming."""
+
+    def swim(self):
+        """Swim method."""
+        print("The creature swims!")
+
 
 class FlyMixin:
-  """ class FlyMixin."""
-  def fly(self):
-    """ methode fly"""
-    prints("The creature flies!")
+    """Mixin that adds flying."""
 
-class Dragon(SwimMixin,FlyMixin):
-  """ class Dragon."""
-  def rora(self):
-    """ methode rora"""
-    prints("The dragon roars!")
-  
+    def fly(self):
+        """Fly method."""
+        print("The creature flies!")
+
+
+class Dragon(SwimMixin, FlyMixin):
+    """Dragon class."""
+
+    def roar(self):
+        """Roar method."""
+        print("The dragon roars!")
