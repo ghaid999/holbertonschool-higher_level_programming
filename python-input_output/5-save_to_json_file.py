@@ -5,4 +5,4 @@ import json
 def save_to_json_file(my_obj, filename):
     """write a UTF-8 text file """
     with open(filename, "w", encoding="utf-8") as file:
-        print json.load(text)
+        json.dump(my_obj, file)
