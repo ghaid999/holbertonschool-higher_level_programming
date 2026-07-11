@@ -9,10 +9,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
-}
+users = {}
 
 
 @app.route('/')
@@ -37,6 +34,8 @@ def get_status():
 def get_user(username):
     """
     Return the full user object for the given username.
+
+    If the username does not exist, respond with a 404 error.
     """
     user = users.get(username)
     if user is None:
@@ -48,6 +47,10 @@ def get_user(username):
 def add_user():
     """
     Add a new user to the in-memory users dictionary.
+
+    Expects a JSON body containing at least a "username" field.
+    Returns appropriate error codes for invalid JSON, a missing
+    username, or a username that already exists.
     """
     data = request.get_json(silent=True)
 
