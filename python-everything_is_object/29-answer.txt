@@ -1,0 +1,17 @@
+Introduction:
+In this project, I learned that objects are very important in Python and that small changes in the code can change everything. I learned how variables point to objects and how Python works with different types of objects.
+
+id and type:
+Every object has an identity and a type. We can use id() to get the object's identity and type() to know its type. I also learned that is checks if two variables point to the same object, while == checks if they have the same value.
+
+Mutable objects:
+Mutable objects can be changed after they are created. For example, lists are mutable, so using append() changes the same list.
+
+Immutable objects:
+Immutable objects cannot be changed after they are created. Integers, strings, and tuples are examples. When we change an immutable object, Python creates a new object instead.
+
+Why does it matter:
+It is important to understand the difference because mutable and immutable objects behave differently. A change to a mutable object can affect other variables pointing to it, while immutable objects cannot be changed directly.
+
+Arguments passed to functions:
+When an object is passed to a function, the function receives a reference to that object. If the object is mutable, the function can change it. If it is immutable, the function cannot change the original object.
